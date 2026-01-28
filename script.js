@@ -1,3 +1,4 @@
+let currentUser = "";
 class todoList {
     constructor() {
         this.editingIndex = -1;
@@ -20,7 +21,7 @@ class todoList {
             this.todoInput.value = '';
         }
     }
-    
+
     addTask(taskText) {
         const listItem = document.createElement('li');
         listItem.className = 'list-group-item todo-item';
@@ -57,6 +58,9 @@ class todoList {
     }
 }
 
+
+
+
 class TimestampedTodoList extends todoList {
     addTask(taskText) {
         super.addTask(taskText);
@@ -69,3 +73,21 @@ class TimestampedTodoList extends todoList {
 }
 
 document.addEventListener('DOMContentLoaded', () => new todoList());
+
+document.getElementById('submitName').addEventListener('click', () => {
+  const username = document.getElementById('username').value.trim();
+
+  if (username === "") {
+    alert("Please enter your name.");
+    return;
+  }
+
+  // Update the modal message
+  document.getElementById('welcomeMessage').textContent = `Welcome, ${username}!`;
+
+  // Show the Bootstrap modal
+  const welcomeModal = new bootstrap.Modal(document.getElementById('welcomeModal'));
+  welcomeModal.show();
+});
+
+

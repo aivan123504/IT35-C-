@@ -37,3 +37,40 @@ button:hover {
     background-color: #0056b3;
 }
 
+
+/* Unique styling for this welcome component */
+.welcome-container {
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.welcome-input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.welcome-input {
+  margin-bottom: 10px;
+}
+
+.welcome-btn {
+  align-self: flex-start;
+}
+
+/* Optional modal styling */
+.welcome-modal-content {
+  border-radius: 10px;
+}
+
+.welcome-modal-body {
+  font-size: 1.1rem;
+}
+
+.welcome-modal-title {
+  font-weight: bold;
+}
+
+
